@@ -1,16 +1,23 @@
 package pack.poo;
 
 public class City {
-
-	public String country;
-	public String name;
-	public int nbInhabitants;
+	//Les attributs privés empêchent l’accès direct.
+	private String country;
+	private String name;
+	private int nbInhabitants;
 
 	//constructeurs
 	public City(String country, String name, int nbInhabitants) {
 		this.country = country;
 		this.name = name;
-		this.nbInhabitants = nbInhabitants;
+/*		this.nbInhabitants = nbInhabitants;  */
+		//contrôle au moment de l'instantiation d'une new city
+		if(nbInhabitants < 0 ) {
+			System.out.println("Erreur : le nombre d'habitants ne peut être négatif. Valeur mise à 0 par défaut.");
+			this.nbInhabitants = 0;
+		}else {
+			this.nbInhabitants = nbInhabitants;
+		}
 	}	
 /*
 	//méthodes d'affichages
@@ -53,7 +60,15 @@ public class City {
 
 	//Mutateurs/setters
 	public void setNbInhabitants(int nbInhabitants) {
-		this.nbInhabitants = nbInhabitants;
+/*		this.nbInhabitants = nbInhabitants;  */
+		if(nbInhabitants < 0 ) {
+			System.out.println("la population ne peut pas être négative !");
+		}else if (nbInhabitants < this.nbInhabitants){
+			System.out.println("Attention : vous réduisez la population de " + this.name + " !");
+			this.nbInhabitants = nbInhabitants;
+		}else {
+			this.nbInhabitants = nbInhabitants;
+		}
 	}
 	
 	
