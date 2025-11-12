@@ -1,0 +1,21 @@
+# Fichiers compilés
+*.class
+
+# Dossiers bin ou build
+bin/
+build/
+
+# Fichiers de configuration Eclipse
+.project
+.classpath
+.settings/
+
+# Mac / système
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Fichiers temporaires
+*.tmp
