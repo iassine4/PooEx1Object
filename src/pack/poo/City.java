@@ -11,4 +11,10 @@ public class City {
 		this.name = name;
 		this.nbInhabitants = nbInhabitants;
 	}	
+	
+	public void display() {
+		System.out.println("Nom de la ville : " + this.name + "\t" +
+						   "Pays : " + this.country + "\t" +
+						   "Nombre d'habitants : " + this.nbInhabitants);
+	}
 }

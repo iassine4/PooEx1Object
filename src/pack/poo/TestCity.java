@@ -4,11 +4,10 @@ public class TestCity {
 
 	public static void main(String[] args) {
 
-		City toulouse = new City("France","Toulouse", 20000);
+		City toulouse = new City("France","Toulouse", 450000);
 		
-		System.out.println("nom de la ville : " + toulouse.name + "\t" + 
-							"pays : " + toulouse.country + "\t" + 
-							"Nombre d'habitants : " + toulouse.nbInhabitants);
+		toulouse.display();
+			
 	}
 
 }
