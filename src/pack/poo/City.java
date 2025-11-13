@@ -6,7 +6,7 @@ public class City {
 	private String name;
 	private int nbInhabitants;
 
-	//constructeurs
+	//constructeurs 1
 	public City(String country, String name, int nbInhabitants) {
 		this.country = country;
 		this.name = name;
@@ -19,6 +19,22 @@ public class City {
 			this.nbInhabitants = nbInhabitants;
 		}
 	}	
+
+	//constructeurs 2
+		public City(String name, int nbInhabitants){
+			this.country = "Unknown";
+			this.name = name;
+	/*		this.nbInhabitants = nbInhabitants;  */
+			//contrôle au moment de l'instantiation d'une new city
+			if(nbInhabitants < 0 ) {
+				System.out.println("Erreur : le nombre d'habitants ne peut être négatif. Valeur mise à 0 par défaut.");
+				this.nbInhabitants = 0;
+			}else {
+				this.nbInhabitants = nbInhabitants;
+			}
+			
+		}
+		
 /*
 	//méthodes d'affichages
 	public void display() {
@@ -70,6 +86,5 @@ public class City {
 			this.nbInhabitants = nbInhabitants;
 		}
 	}
-	
 	
 }
