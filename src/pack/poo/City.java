@@ -5,7 +5,8 @@ public class City {
 	private String country;
 	private String name;
 	private int nbInhabitants;
-
+	
+	private static int cityCount = 0;
 	//constructeurs 1
 	public City(String country, String name, int nbInhabitants) {
 		this.country = country;
@@ -18,6 +19,7 @@ public class City {
 		}else {
 			this.nbInhabitants = nbInhabitants;
 		}
+		cityCount = getCityCount() + 1; // incrémentation du compteur
 	}	
 
 	//constructeurs 2
@@ -32,17 +34,8 @@ public class City {
 			}else {
 				this.nbInhabitants = nbInhabitants;
 			}
-			
+			cityCount = getCityCount() + 1; // incrémentation du compteur
 		}
-		
-/*
-	//méthodes d'affichages
-	public void display() {
-		System.out.println("Nom de la ville : " + this.name + "\t" +
-						   "Pays : " + this.country + "\t" +
-						   "Nombre d'habitants : " + this.nbInhabitants);
-	}
-*/
 	
 	//méthodes d'affichages
 	public String toString() {
@@ -90,5 +83,9 @@ public class City {
 	public void display() {
         System.out.println("Ville de " + name + " en " + country + " ayant " + nbInhabitants + " habitants");
     }
+
+	public static int getCityCount() {
+		return cityCount;
+	}
 	
 }
