@@ -87,4 +87,8 @@ public class City {
 		}
 	}
 	
+	public void display() {
+        System.out.println("Ville de " + name + " en " + country + " ayant " + nbInhabitants + " habitants");
+    }
+	
 }

@@ -27,6 +27,10 @@ public class TestCity {
 		rabat.setCountry("Maroc");
 		System.out.println(rabat + "\n");
 		
+//===== Exercice 1.3 =====		
+		City toulouse = new City("France","Toulouse", 450000);
+		//affichage
+		toulouse.display();
 	}
 
 }
