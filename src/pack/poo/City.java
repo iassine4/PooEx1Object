@@ -36,13 +36,13 @@ public class City {
 			}
 			cityCount = getCityCount() + 1; // incrémentation du compteur
 		}
-	
-	//méthodes d'affichages
-	public String toString() {
-		return "Nom de la ville : " + getName() + "\t" +
-						   "Pays : " + getCountry() + "\t" +
-						   "Nombre d'habitants : " + getNbInhabitants();
-	}
+		//constructeur pour TestPerson
+		public City(String name, String country) {
+			this.name = name;
+			this.country = country;
+			this.nbInhabitants = 0;
+		}
+
 	
 	//accesseurs/getters 
 	public String getCountry() {
@@ -80,12 +80,30 @@ public class City {
 		}
 	}
 	
+	public static int getCityCount() {
+		return cityCount;
+	}
+	
 	public void display() {
         System.out.println("Ville de " + name + " en " + country + " ayant " + nbInhabitants + " habitants");
     }
 
-	public static int getCityCount() {
-		return cityCount;
+	//méthodes d'affichages
+	public String toString() {
+		String result = name + " , " + country;
+	    if(nbInhabitants > 0) {
+	        result += " , " + nbInhabitants + " habitants";
+	    }
+	    return result;
+	/*
+		if (nbInhabitants > 0)
+		return "Nom de la ville : " + getName() + "\t" +
+						   "Pays : " + getCountry() + "\t" +
+						   "Nombre d'habitants : " + getNbInhabitants();
+		else
+			return name + ", " + country;
+	*/
 	}
+	
 	
 }
